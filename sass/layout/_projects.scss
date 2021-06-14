@@ -1,7 +1,22 @@
 .buttons-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
 
   &__item:not(:last-child) {
     margin-right: 8px;
@@ -38,19 +53,53 @@
 }
 
 .projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--projects-list-gap));
-  margin-top: calc(-1 * var(--projects-list-gap));
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--projects-list-gap));
+    margin-top: calc(-1 * var(--projects-list-gap));
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--projects-list-gap));
+    margin-top: calc(-1 * var(--projects-list-gap));
+  }
 
   &__item {
-    flex-basis: calc(100% / 3 - var(--projects-list-gap));
-    margin-left: var(--projects-list-gap);
-    margin-top: var(--projects-list-gap);
-
+    width: 450px;
+    height: 404px;
     cursor: pointer;
 
     transition: box-shadow 250ms var(--transition-timing-function);
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 440px;
+      flex-basis: calc(100% / 2 - var(--projects-list-gap));
+      margin-left: var(--projects-list-gap);
+      margin-top: var(--projects-list-gap);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+      flex-basis: calc(100% / 3 - var(--projects-list-gap));
+      margin-left: var(--projects-list-gap);
+      margin-top: var(--projects-list-gap);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+      }
+    }
 
     &:hover,
     &:focus {
@@ -63,9 +112,14 @@
 .project-card {
   &__content {
     padding: 20px 24px;
+    height: 110px;
     border-right: var(--portfolio-card-border);
     border-bottom: var(--portfolio-card-border);
     border-left: var(--portfolio-card-border);
+
+    @media screen and (min-width: 768px) {
+      height: 146px;
+    }
   }
 
   &__title {
@@ -111,8 +165,16 @@
 
   &__container {
     position: absolute;
-    padding: 63px 24px;
+    padding: 77px 24px;
     transition: opacity 250ms var(--transition-timing-function);
+
+    @media screen and (min-width: 768px) {
+      padding: 49px 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
 
     .project-card:hover &,
     .project-card:focus & {

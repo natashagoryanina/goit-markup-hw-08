@@ -30,7 +30,11 @@
                     <li class="site-nav__item"><a href="" class="link site-nav__link">Контакты</a></li>
                 </ul>
             </nav>
-            
+            <button class="header__mobile-button" type="button" data-menu-button>
+                <svg class="header__mobile-button-icon">
+                    <use href="./images/icons.svg#icon-burger-button"></use>
+                </svg>
+            </button>
             <ul class="list head-contacts">
                 <li class="head-contacts__item">
                     <a href="malito:info@devstudio.com" class="link head-contacts__link">
@@ -49,6 +53,53 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="mobile-menu is-open" data-menu>
+            <div class="container mobile-menu__container">
+                <button class="mobile-menu__button" type="button" data-menu-close>
+                    <svg class="mobile-menu__icon" width="19" height="19">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="container mobile-menu__site-nav-container">
+                    <ul class="list mobile-site-nav">
+                        <li class="mobile-site-nav__item"><a href="./index.html" class="link mobile-site-nav__link mobile-site-nav__link--current">Студия</a>
+                        </li>
+                        <li class="mobile-site-nav__item"><a href="./portfolio.html" class="link mobile-site-nav__link">Портфолио</a></li>
+                        <li class="mobile-site-nav__item"><a href="" class="link mobile-site-nav__link">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="container mobile-menu__contacts-container">
+                    <ul class="list mobile-contacts">
+                        <li class="mobile-contacts__item">
+                            <a href="tel:+380961111111" class="link mobile-contacts__link-tel">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-contacts__item">
+                            <a href="malito:info@devstudio.com" class="link mobile-contacts__link-email">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container mobile-menu__social-networks">
+                    <ul class="list mobile-social-networks">
+                        <li class="mobile-social-networks__item">
+                            <a class="link mobile-social-networks__link" href="">Instagram</a>
+                        </li>
+                        <li class="mobile-social-networks__item">
+                            <a class="link mobile-social-networks__link" href="">Facebook</a>
+                        </li>
+                        <li class="mobile-social-networks__item">
+                            <a class="link mobile-social-networks__link" href="">Twitter</a>
+                        </li>
+                        <li class="mobile-social-networks__item">
+                            <a class="link mobile-social-networks__link" href="">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -205,7 +256,7 @@
                                         srcset="./images/mobile/main_workers/igor_demyanenko-mobile.jpg 1x, ./images/mobile/main_workers/igor_demyanenko-mobile@2x.jpg 2x"
                                         media="(min-width: 280px)">
 
-                                    <img src="./images/mobile/main_workers/igor_demyanenko-mobile.jpg" alt="Фото Игоря Демьяненко" width="270" height="260">
+                                    <img src="./images/mobile/main_workers/igor_demyanenko-mobile.jpg" alt="Фото Игоря Демьяненко">
                                 </picture>
                             </div>
                             <div class="worker-card__content">
@@ -269,8 +320,7 @@
                                         srcset="./images/mobile/main_workers/olga_repina-mobile.jpg 1x, ./images/mobile/main_workers/olga_repina-mobile@2x.jpg 2x"
                                         media="(min-width: 280px)">
                                 
-                                    <img src="./images/mobile/main_workers/olga_repina-mobile.jpg" alt="Фото Ольги Репиной" width="270"
-                                        height="260">
+                                    <img src="./images/mobile/main_workers/olga_repina-mobile.jpg" alt="Фото Ольги Репиной">
                                 </picture>
                             </div>
                             <div class="worker-card__content">
@@ -334,7 +384,7 @@
                                         srcset="./images/mobile/main_workers/nikolay_tarasov-mobile.jpg 1x, ./images/mobile/main_workers/nikolay_tarasov-mobile@2x.jpg 2x"
                                         media="(min-width: 280px)">
                                 
-                                    <img src="./images/mobile/main_workers/nikolay_tarasov-mobile.jpg" alt="Фото Николая Тарасова" width="270" height="260">
+                                    <img src="./images/mobile/main_workers/nikolay_tarasov-mobile.jpg" alt="Фото Николая Тарасова">
                                 </picture>
                             </div>
                             <div class="worker-card__content">
@@ -398,8 +448,7 @@
                                         srcset="./images/mobile/main_workers/mikhail_ermakov-mobile.jpg 1x, ./images/mobile/main_workers/mikhail_ermakov-mobile@2x.jpg 2x"
                                         media="(min-width: 280px)">
                                 
-                                    <img src="./images/mobile/main_workers/mikhail_ermakov-mobile.jpg" alt="Фото Михаила Ермакова width="270"
-                                        height="260">
+                                    <img src="./images/mobile/main_workers/mikhail_ermakov-mobile.jpg" alt="Фото Михаила Ермакова">
                                 </picture>
                             </div>
                             <div class="worker-card__content">
@@ -617,6 +666,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>
