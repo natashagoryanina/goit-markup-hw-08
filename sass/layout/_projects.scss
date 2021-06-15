@@ -117,7 +117,7 @@
     border-bottom: var(--portfolio-card-border);
     border-left: var(--portfolio-card-border);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       height: 146px;
     }
   }
