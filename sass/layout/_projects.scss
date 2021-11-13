@@ -74,7 +74,7 @@
 
     transition: box-shadow 250ms var(--transition-timing-function);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px){
       width: 354px;
       height: 440px;
       flex-basis: calc(100% / 2 - var(--projects-list-gap));
@@ -84,7 +84,6 @@
 
     @media screen and (min-width: 1200px) {
       width: 370px;
-      height: 404px;
       flex-basis: calc(100% / 3 - var(--projects-list-gap));
       margin-left: var(--projects-list-gap);
       margin-top: var(--projects-list-gap);
